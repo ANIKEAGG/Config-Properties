@@ -1,0 +1,39 @@
+server:
+#    port: 3306
+    port: 5001
+    servlet:
+        context-path: /v1/api/loans
+
+spring:
+    application:
+        name: lendingservice
+
+#eureka:
+#    client:
+#        service-url:
+#            defaultZone: http://localhost:4999/eureka/  # might change in future
+#        register-with-eureka: true
+#        fetch-registry: true
+#    instance:
+#        hostname: localhost
+#        prefer-ip-address: true
+
+management:
+    endpoint:
+        health:
+#            enabled: true
+            show-details: always
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+
+logging:
+    level:
+        org.springframework.web:
+            - INFO
+            - DEBUG
+        com.smeonboarding:
+            - INFO
+            - DEBUG
+ 
