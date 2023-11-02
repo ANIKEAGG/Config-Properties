@@ -1,0 +1,26 @@
+server:
+  port: 8092
+  servlet:
+    context-path: /config
+spring:
+  application:
+    name: configserver
+eureka:
+    client:
+        service-url:
+            defaultZone: http://10.235.20.113:4999/eureka
+        register-with-eureka: true
+        fetch-registry: true
+    instance:
+        hostname: localhost
+        prefer-ip-address: true
+management:
+    endpoint:
+        health:
+#            enabled: true
+            show-details: always
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+ 
