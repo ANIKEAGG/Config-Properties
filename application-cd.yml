@@ -1,0 +1,20 @@
+server:
+    port: 8090
+    servlet:
+        context-path: /creditDecisioning
+spring:
+    application:
+        name: creditDecisioning
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/creditDecisioning?createDatabaseIfNotExist=true
+        password: root
+        username: root
+    jpa:
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+        show-sql: true
